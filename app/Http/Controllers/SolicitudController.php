@@ -7,6 +7,7 @@ use App\Entrada;
 use App\Equipo;
 use App\Modelo;
 use App\Parte;
+use App\Servicio;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Foreach_;
 use SebastianBergmann\Environment\Console;
@@ -24,10 +25,19 @@ class SolicitudController extends Controller
       
         $parte = new Parte($request->all());
         $parte->save();
+
+        $servicio = new Servicio($request->all());
+        $servicio->save();
+
         $entrada = new Entrada($request->all()) ;
         $entrada->save();
+        
         $equipo = new Equipo($request->all());
         $equipo->save();
+
+       
+
+       $entrada->equipos()->servicios()->attach($servicio->id);
             
         return 'siiiii';
 

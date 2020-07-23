@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePartesTable extends Migration
+class CreatePartRadioService extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreatePartesTable extends Migration
      */
     public function up()
     {
-        Schema::create('partes', function (Blueprint $table) {
+        Schema::create('part_radio_service', function (Blueprint $table) {
             $table->id();
-            $table->string('ta', 2)->default('no');
-            $table->string('cv', 2)->default('no');;
-            $table->string('pv', 2)->default('no');;
-            $table->string('at', 2)->default('no');;
-            $table->string('bt', 2)->default('no');;
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ class CreatePartesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partes');
+        Schema::dropIfExists('part_radio_service');
     }
 }

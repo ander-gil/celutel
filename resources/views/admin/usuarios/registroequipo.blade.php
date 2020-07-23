@@ -85,7 +85,7 @@
              <div class="form-check mb-2 mr-sm-2">
                  
                    <label class="form-check-label" for="inlineFormCheck">
-                    <input type="hidden"  name="ta" value="no">
+                    
                     <input type="checkbox" name="ta" value="si">
                    TA
                    </label>
@@ -94,7 +94,7 @@
                <div class="form-check mb-2 mr-sm-2">
                     
                     <label class="form-check-label" for="inlineFormCheck">
-                      <input type="hidden"  name="cv" value="no">
+                   
                       <input type="checkbox" name="cv" value="si">
                       CV
                     </label>
@@ -103,7 +103,7 @@
                <div class="form-check mb-2 mr-sm-2">
                      
                      <label class="form-check-label" for="inlineFormCheck">
-                      <input type="hidden"  name="pv" value="no">
+                  
                     <input type="checkbox" name="pv" value="si">
                        Pv
                      </label>
@@ -113,7 +113,7 @@
                  
                    
                     <label class="form-check-label" for="inlineFormCheck">
-                      <input type="hidden"  name="at" value="no">
+                     
                       <input type="checkbox" name="at" value="si">
                        AT
                     </label>
@@ -122,7 +122,7 @@
                <div class="form-check mb-2 mr-sm-2">
                    
                     <label class="form-check-label" for="inlineFormCheck">
-                      <input type="hidden"  name="bt" value="no">
+                     
                       <input type="checkbox" name="bt" value="si">
                       BT
                     </label>
@@ -147,7 +147,7 @@
             $.get('modelos', {marca_id : marca_id}, function(modelos){
               
               $('#modelo').empty();
-              $('#modelo').append("<option value=''>Selecciona un Modelo</option>");
+              $('#modelo').append("<option value=''>"+"Selecciona un Modelo</option>");
               $('#marca_id').val(marca_id); 
               $.each(modelos, function(index, value){
                 $('#modelo').append("<option value='" + index + "'>" + value + "</option>");
